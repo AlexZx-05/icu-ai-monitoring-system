@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICU Command Center</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb bg-orb-a"></div>
+    <div class="bg-orb bg-orb-b"></div>
+
+    <main class="layout">
+      <header class="topbar glass">
+        <div>
+          <p class="eyebrow">Critical Care Intelligence</p>
+          <h1>ICU Command Center</h1>
+          <p id="lastRefresh" class="muted">Syncing telemetry...</p>
+          <p id="notifyStatus" class="muted">Email alerts: checking...</p>
+        </div>
+        <div class="actions">
+          <button id="reloadBtn" class="btn btn-secondary">Reload Data</button>
+          <button id="autorefreshBtn" class="btn btn-primary">Auto Refresh: ON</button>
+        </div>
+      </header>
+
+      <section class="kpi-grid">
+        <article class="card glass">
+          <p>Patients Monitored</p>
+          <h2 id="kpiMonitored">0</h2>
+        </article>
+        <article class="card glass danger">
+          <p>Critical</p>
+          <h2 id="kpiCritical">0</h2>
+        </article>
+        <article class="card glass warning">
+          <p>High Risk</p>
+          <h2 id="kpiHigh">0</h2>
+        </article>
+        <article class="card glass">
+          <p>Average Risk</p>
+          <h2 id="kpiAvgRisk">0%</h2>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <section class="panel glass">
+          <div class="panel-head">
+            <h3>Risk Triage Board</h3>
+            <div class="filter-row">
+              <select id="riskFilter">
+                <option value="">All Risks</option>
+                <option value="critical">Critical</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+              <input id="searchInput" placeholder="Search patient or reason..." />
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Patient</th>
+                  <th>Risk</th>
+                  <th>Vitals Snapshot</th>
+                  <th>Trend</th>
+                  <th>Reason</th>
+                </tr>
+              </thead>
+              <tbody id="patientRows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="side-stack">
+          <section class="panel glass">
+            <div class="panel-head">
+              <h3>Live Alerts</h3>
+            </div>
+            <div id="alertFeed" class="alert-feed"></div>
+          </section>
+
+          <section class="panel glass">
+            <div class="panel-head">
+              <h3>Patient Detail</h3>
+            </div>
+            <div id="detailPane" class="detail-pane">
+              Select a patient to inspect waveform trend and latest metrics.
+            </div>
+          </section>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

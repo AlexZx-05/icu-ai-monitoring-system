@@ -1,0 +1,18 @@
+{
+  "vitals": {
+    "heart_rate": [220045],
+    "bp_mean": [220052, 220181],
+    "spo2": [220277],
+    "temp_c": [223762],
+    "temp_f": [223761]
+  },
+  "labs": {
+    "creatinine": [50912],
+    "lactate": [50813],
+    "wbc": [51301]
+  },
+  "merge_tolerance_hours": {
+    "vitals": 2,
+    "labs": 12
+  }
+}
