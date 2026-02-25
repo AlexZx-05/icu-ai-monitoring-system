@@ -1,6 +1,6 @@
 # ICU Command Center
 
-![ICU Command Center Dashboard](docs/assets/icu-command-center.png)
+![ICU Command Center Dashboard](docs/assets/icu-command-center1.png)
 
 Advanced ICU monitoring platform with:
 
