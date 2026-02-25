@@ -41,11 +41,3 @@ Open:
 MIMIC-IV + eICU migration guide:
 
 - [Migration Plan](docs/mimic4_eicu_migration.md)
-
-## Screenshot Path
-
-Put your screenshot at:
-
-- `docs/assets/icu-command-center.png`
-
-So GitHub will render it at the top of this README.
